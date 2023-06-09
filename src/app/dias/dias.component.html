@@ -1,0 +1,30 @@
+
+<div class="container">
+    <p align="left">Digite el dia: <br>
+        |1.lunes 
+        |2.Martes 
+        |3.Miercoles <br>
+        |4.Jueves 
+        |5.Viernes    
+        |6.Sabado <br>
+        |7.Domingo |8.Agosto  |9.Septiembre <br>
+    </p>
+
+</div>
+
+<input type="number" class="form-control mt-2" #nuevoDia>
+<button class="btn btn-primary mt-2 mb-4" (click)="dia = nuevoDia.value" >
+    Mostrar dia
+</button>
+
+<div [ngSwitch]="dia" *ngIf="dia" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
+    <span *ngSwitchCase="1">Lunes</span>
+    <span *ngSwitchCase="2">Martes</span>
+    <span *ngSwitchCase="3">Miercoles</span>
+    <span *ngSwitchCase="4">Jueves</span>
+    <span *ngSwitchCase="5">Viernes</span>
+    <span *ngSwitchCase="6">Sabado</span>
+    <span *ngSwitchCase="7">Domingo</span>
+    <span *ngSwitchDefault>Valor no valido</span>
+</div>
+

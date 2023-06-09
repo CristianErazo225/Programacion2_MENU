@@ -1,0 +1,57 @@
+
+<div class="container">
+    <p align="left">Digite el mes: <br>
+        |1.Enero |2.febrero |3.Marzo <br>
+        |4.Abril |5.Mayo    |6.Junio <br>
+        |7.Julio |8.Agosto  |9.Septiembre <br>
+        |10.Octubre |11.Noviembre |12.Diciembre <br>
+    </p>
+
+</div>
+
+
+
+<input type="number" class="form-control mt-2" #nuevoDia>
+<button class="btn btn-primary mt-2 mb-4" (click)="dia = nuevoDia.value" >
+    Mostrar Mes
+</button>
+
+<div [ngSwitch]="dia" *ngIf="dia" > <!--Si no tiene nada no aparecera el mesje de valor no valido-->
+    <span *ngSwitchCase="1">Enero 
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="2">Febrero
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="3">Marzo
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="4">Abril
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="5">Mayo
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="6">Junio
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="7">Julio
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="8">Agosto
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="9">Septiembre
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="10">Octubre
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="11">Noviembre
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchCase="12">Diciembre
+        <app-dias></app-dias>
+    </span>
+    <span *ngSwitchDefault>Valor no valido</span>
+</div>
